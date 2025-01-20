@@ -1,7 +1,22 @@
 @charset "utf-8";
 
 @media screen and (max-width: 480px) {
-    
+
+    header > nav{
+        display: none;
+    }
+
+    main > section#Sobre > .containerSobre > picture >  .imgSobre{
+        flex: 1 1 80%;
+        max-width: 300px;
+    }
+    main > section#Sobre > .containerSobre > p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
     main > section#Servicos {
         justify-content: center;
         width: 100%;
@@ -11,6 +26,10 @@
 
         flex: 1 1 95%;
         max-width: 95%;
+    }
+
+    main > section#Sobre{
+        justify-content: center;
     }
     
 }
