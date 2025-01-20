@@ -100,9 +100,33 @@ main > section#Sobre {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-evenly;
+    gap: 10px;
     width: 100%;
     padding: 20px;
     background-color: var(--corBackground2);
+}
+
+main > section#Sobre > .containerSobre{
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    flex: 1 1 45%;
+    gap: 10px;
+    max-width: 600px;
+    margin: 10px 0px;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: var(--corBackgroundDestaque);
+}
+
+main > section#Sobre > .containerSobre > picture >  .imgSobre{
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
 }
 
 main > section#Servicos {
@@ -221,6 +245,17 @@ main > section#Contatos {
     width: 100%;
     padding: 20px;
     color: #000;
+    background-color: var(--corBackground2);
+}
+
+main > section#Contatos {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
     background-color: var(--corBackground2);
 }
 
