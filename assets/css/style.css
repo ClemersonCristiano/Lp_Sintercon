@@ -102,34 +102,38 @@ main > section#Sobre {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-evenly;
-    gap: 10px;
     width: 100%;
     padding: 20px;
     background-color: var(--corBackground2);
 }
 
 main > section#Sobre > .containerSobre{
-    
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-flow: row wrap;
-    flex: 1 1 45%;
+    flex: 1 1 400px;
+    max-width: 600px;
     gap: 10px;
-    max-width: 700px;
     margin: 10px 0px;
     padding: 10px;
-    color: #000;
+    text-align: center;
+    color: #ffffff;
     border-radius: 10px;
-    /* box-shadow: 0px 0px 10px #000; */
-    /* background-color: var(--corBackgroundDestaque); */
+    background-color: var(--corBackgroundDestaque);
+    box-shadow: 0px 0px 10px #000;
 }
 
-main > section#Sobre > .containerSobre > picture > .imgSobre{
+main > section#Sobre > .containerSobre > picture >  .imgSobre{
     width: 400px;
     height: 300px;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
+}
+
+main > section#Sobre > .containerSobre > p{
+    padding: 10px;
+    max-width: 400px;
 }
 
 main > section#Servicos {
