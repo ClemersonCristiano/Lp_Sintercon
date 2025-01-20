@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@media screen and (max-width: 480px) {
+    
+    main > section#Servicos {
+        justify-content: center;
+        width: 100%;
+    }
+
+    main > section#Servicos > .card{
+
+        flex: 1 1 95%;
+        max-width: 95%;
+    }
+    
+}
+
+@media screen and (min-width: 480px) and (max-width: 980px) {
+    main > section#Servicos {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 980px){
+    main > section#Servicos {
+        width: 80%;
+    }
+}
