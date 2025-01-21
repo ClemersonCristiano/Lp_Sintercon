@@ -32,7 +32,7 @@ header {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 100px;
+    gap: 10px;
     padding: 10px;
     background-color: var(--corBackgroundDestaque);
     border-bottom: 4px solid var(--corDourada);
@@ -42,14 +42,15 @@ header {
     z-index: 1000;
 }
 
-header > h1 {
+header > picture, footer > .dadosFooter > picture{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    height: 100%;
-    color: var(--corDourada);
+    width: fit-content;
+}
+
+header > picture > .logoSintercon {
+    width: 150px;
 }
 
 header > nav {
@@ -59,6 +60,7 @@ header > nav {
     font-size: 18px;
     width: 500px;
     height: 50px;
+    text-transform: uppercase;
 }
 
 header > nav > ul {
@@ -92,9 +94,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     width: 100%;
-    padding-top: 100px;
+    padding-top: 90px;
+}
+
+main > section#Sobre, main > section#Servicos, main > section#Contatos{
+    scroll-margin-top: 90px;
 }
 
 main > section#Sobre {
@@ -104,11 +110,30 @@ main > section#Sobre {
     justify-content: space-evenly;
     gap: 10px;
     width: 100%;
-    padding: 20px;
+    padding: 20px 0px;
     background-color: var(--corBackground2);
 }
 
+main > section#Sobre > h1{
+    margin: 10px 0px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #000;
+    text-align: center;
+}
+
 main > section#Sobre > .containerSobre{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+}
+
+main > section#Sobre > .containerSobre > .containerCardSobre{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -119,25 +144,24 @@ main > section#Sobre > .containerSobre{
     margin: 10px 0px;
     padding: 10px;
     text-align: center;
-    color: #ffffff;
+    color: #000;
     border-radius: 10px;
-    background-color: var(--corBackgroundDestaque);
-    box-shadow: 0px 0px 10px #000;
 }
 
-main > section#Sobre > .containerSobre > picture >  .imgSobre{
-    width: 400px;
-    height: 300px;
+main > section#Sobre > .containerSobre > .containerCardSobre > picture > .imgSobre{
+    width: 250px;
+    height: 250px;
     border-radius: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: #000;
 }
 
-main > section#Sobre > .containerSobre > p{
+main > section#Sobre > .containerSobre > .containerCardSobre > p{
     padding: 10px;
     max-width: 400px;
 }
 
-main > section#Servicos {
+main > section#Servicos,
+main > section#Servicos > .containerCards{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -147,14 +171,22 @@ main > section#Servicos {
     color: #f6f6f6;
 }
 
-main > section#Servicos > .card{
+main > section#Servicos > h1{
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 2.1rem;
+}
+
+main > section#Servicos > .containerCards > .card{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     flex: 1 1 320px;
     max-width: 320px;
-    max-height: 480px;
+    max-height: 520px;
     gap: 10px;
     border-radius: 10px;
     padding: 10px 0px;
@@ -163,7 +195,7 @@ main > section#Servicos > .card{
     background-color: var(--corBackgroundDestaque);
 }
 
-main > section#Servicos > .card:hover{
+main > section#Servicos > .containerCards > .card:hover{
     transform: translateY(-10px);
     box-shadow: 0px 0px 10px 1px var(--corBackgroundDestaque);
     border: none;
@@ -171,7 +203,7 @@ main > section#Servicos > .card:hover{
     border-top: 6px solid var(--corDourada);
 }
 
-main > section#Servicos > .card > h1{
+main > section#Servicos > .containerCards > .card > h1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,7 +216,7 @@ main > section#Servicos > .card > h1{
     width: 100%;
 }
 
-main > section#Servicos > .card > picture{
+main > section#Servicos > .containerCards > .card > picture{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,17 +224,17 @@ main > section#Servicos > .card > picture{
     background-color: var(--corBackground2);
 }
 
-main > section#Servicos > .card > picture > img.iconCard{
+main > section#Servicos > .containerCards > .card > picture > img.iconCard{
     width: 110px;
     height: 110px;
     padding: 10px;
 }
 
-main > section#Servicos > .card:hover > picture{
+main > section#Servicos > .containerCards > .card:hover > picture{
     box-shadow: 0px 0px 4px var(--corBackground2);
     transition: all .4s;
 }
-main > section#Servicos > .card > p{
+main > section#Servicos > .containerCards > .card > p{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,7 +244,7 @@ main > section#Servicos > .card > p{
     text-align: center;
 }
 
-main > section#Servicos > .card > .botaoWhats{
+main > section#Servicos > .containerCards > .card > .botaoWhats{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -225,22 +257,22 @@ main > section#Servicos > .card > .botaoWhats{
     background-color: var(--corBotaoWhats1);
 }
 
-main > section#Servicos > .card:hover > .botaoWhats{
+main > section#Servicos > .containerCards > .card:hover > .botaoWhats{
     border: 1px solid var(--corDourada);
 }
 
-main > section#Servicos > .card > .botaoWhats:hover{
+main > section#Servicos > .containerCards > .card > .botaoWhats:hover{
     border: none;
     background-color: var(--corBotaoWhats2);
     transition: all .3s ease;
 }
 
-main > section#Servicos > .card > .botaoWhats > .logoBotaoWhats{
+main > section#Servicos > .containerCards > .card > .botaoWhats > .logoBotaoWhats{
     width: 40px;
     height: 40px;
 }
 
-main > section#Servicos > .card > .botaoWhats > p{
+main > section#Servicos > .containerCards > .card > .botaoWhats > p{
     font-weight: 900;
     font-size: 1rem;
 }
@@ -267,17 +299,64 @@ main > section#Contatos {
     background-color: var(--corBackground2);
 }
 
-footer {      
-    width: 100%;
-    height: 500px;
-    padding: 10px;
-    background-color: var(--corBackgroundDestaque);
-    border-top: 4px solid var(--corDourada);
-}
-
-footer > h1{
+main > section#Contatos > h1{
     padding: 10px;
     text-transform: uppercase;
-    font-size: 24px;
-    color: var(--corDourada);
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 2.1rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0px 0px 0px;
+    border-top: 4px solid var(--corDourada);
+    background-color: var(--corBackgroundDestaque);
+    color: #e6e6ff;
+}
+
+footer > .dadosFooter, footer > .infosFooter{
+    flex: 1 1 45%;
+}
+
+footer > .dadosFooter > picture > .logoSintercon {
+    width: 290px;
+}
+
+footer > .infosFooter{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+footer > .dadosFooter > p, footer > .infosFooter > p{
+    width: 300px;
+    padding: 10px;
+}
+
+footer > .desenvolvimento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 100%;
+    max-width: 100%;
+    height: 40px;
+    color: #ffffff;
+    background-color: #000;
+}
+
+footer > .desenvolvimento > p > a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer > .desenvolvimento > p > a:hover{
+    text-decoration: underline;
+    color: #ffffff;
 }
