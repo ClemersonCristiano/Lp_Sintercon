@@ -5,6 +5,18 @@
     header > nav#menu{
         display: none;
     }
+
+    footer > .dadosFooter{
+        display: flex;
+        justify-content: spa;
+        align-items: center;
+        flex: 1 1 100%;
+        flex-flow: column nowrap;
+    }
+
+    footer > .infosFooter{
+        flex-flow: column nowrap;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -41,6 +53,23 @@
     main > section#Servicos {
         width: 100%;
     }
+    
+}
+
+@media screen and (min-width: 1215px) {
+    
+    footer > .dadosFooter{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 1215px) {
+    
+    footer > .infosFooter{
+        flex-flow: column wrap;
+    }
 }
 
 @media screen and (min-width: 1400px) {
@@ -48,4 +77,5 @@
     main > section#Servicos {
         width: 80%;
     }
+
 }
