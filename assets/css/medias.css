@@ -2,7 +2,7 @@
 
 @media screen and (min-width: 300px) and (max-width: 668px) {
 
-    header > nav#menu{
+    header > .menuHeader{
         display: none;
     }
 
