@@ -9,9 +9,9 @@
 }
 
 :root{
-    --corBackground1: #0b0b53;    
+    --corBackground1: #121287;    
     --corBackground2: #e6e6ff;    
-    --corBackgroundDestaque: #060632;   
+    --corBackgroundDestaque: #0b0b59;   
     --corDourada: #ffae00;
     --corBotaoWhats1: #064b1f;
     --corBotaoWhats2: #09622a;
@@ -34,7 +34,7 @@ header {
     width: 100%;
     gap: 10px;
     padding: 10px;
-    background-color: var(--corBackgroundDestaque);
+    background-color: var(--corBackground1);
     border-bottom: 4px solid var(--corDourada);
     box-shadow: 0px 0px 10px #000;
     position: fixed;
@@ -316,7 +316,7 @@ footer {
     width: 100%;
     padding: 10px 0px 0px 0px;
     border-top: 4px solid var(--corDourada);
-    background-color: var(--corBackgroundDestaque);
+    background-color: var(--corBackground1);
     color: #e6e6ff;
 }
 
