@@ -42,6 +42,10 @@ header {
     z-index: 1000;
 }
 
+.logoSintercon{
+    filter: drop-shadow(0px 0px 3px #000);
+}
+
 header > picture, footer > .dadosFooter > picture{
     display: flex;
     justify-content: left;
@@ -240,6 +244,7 @@ main > section#Servicos > .containerCards > .card > p{
     align-items: center;
     height: 180px;
     padding: 10px;
+    margin: 10px 0px;
     font-size: 1rem;
     text-align: center;
 }
