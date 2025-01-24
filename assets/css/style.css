@@ -31,6 +31,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-flow: row wrap;
     width: 100%;
     gap: 10px;
     padding: 10px;
@@ -46,6 +47,73 @@ header {
     filter: drop-shadow(0px 0px 3px #000);
 }
 
+header > #botaoMenuMobile{
+    flex: 1 1 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 5px;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+}
+
+header > #botaoMenuMobile > .barra{
+    width: 35px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: var(--corDourada);
+    filter: drop-shadow(0px 0px 3px #000);
+}
+
+header > #menuMobile{
+    width: 100%;
+    flex-flow: column nowrap;
+}
+
+header > #menuMobile > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 100%;
+    gap: 20px;
+    list-style: none;
+    color: #f6f6f6;
+    font-size: 1.2rem;
+}
+
+header > #menuMobile > ul > li{
+    flex: 1 1 100%;
+    padding: 10px;
+    position: relative;
+}
+
+header > #menuMobile > ul > li > .itemMenuMobile{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header > #menuMobile > ul > li > .itemMenuMobile::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    bottom: -5px;
+    height: 3px;
+    background-color: var(--corDourada);
+    transition: .3s ease;
+}
+
+header > #menuMobile > ul > li > .itemMenuMobile:hover::after {
+    width: 100%;
+}
+
 header > picture, footer > .dadosFooter > picture{
     display: flex;
     justify-content: left;
@@ -57,7 +125,7 @@ header > picture > .logoSintercon {
     width: 150px;
 }
 
-header > .menuHeader {
+header > #menuHeader {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -67,7 +135,7 @@ header > .menuHeader {
     text-transform: uppercase;
 }
 
-header > .menuHeader > ul {
+header > #menuHeader > ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -79,13 +147,13 @@ header > .menuHeader > ul {
     color: #f6f6f6;
 }
 
-header > .menuHeader > ul > li {
+header > #menuHeader > ul > li {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-header > .menuHeader > ul > li > .itemMenuHeader{
+header > #menuHeader > ul > li > .itemMenuHeader{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,7 +163,7 @@ header > .menuHeader > ul > li > .itemMenuHeader{
     text-decoration: none;
 }
 
-header > .menuHeader > ul > li > .itemMenuHeader::after{
+header > #menuHeader > ul > li > .itemMenuHeader::after{
     content: "";
     position: absolute;
     bottom: -3px;
@@ -105,7 +173,7 @@ header > .menuHeader > ul > li > .itemMenuHeader::after{
     transition: 0.3s ease;
 }
 
-header > .menuHeader > ul > li > .itemMenuHeader:hover::after{
+header > #menuHeader > ul > li > .itemMenuHeader:hover::after{
     width: 100%;
 }
 
@@ -138,7 +206,8 @@ main > section#Sobre > h1{
     padding: 10px;
     text-transform: uppercase;
     font-size: 2rem;
-    color: #000;
+    color: var(--corDourada);
+    text-shadow: 2px 1px 1px #000000a0;
     text-align: center;
 }
 
@@ -196,6 +265,7 @@ main > section#Servicos > h1{
     font-size: 2.5rem;
     text-align: center;
     line-height: 2.1rem;
+    text-shadow: 2px 1px 1px #000000a0;
 }
 
 main > section#Servicos > .containerCards > .card{
@@ -233,6 +303,7 @@ main > section#Servicos > .containerCards > .card > h1{
     font-size: 1.5rem;
     color: #ffffff;
     width: 100%;
+    text-shadow: 2px 1px 1px #000000a0;
 }
 
 main > section#Servicos > .containerCards > .card > picture{
@@ -262,6 +333,7 @@ main > section#Servicos > .containerCards > .card > p{
     margin: 10px 0px;
     font-size: 1rem;
     text-align: center;
+    text-shadow: 2px 1px 1px #000000a0;
 }
 
 main > section#Servicos > .containerCards > .card > .botaoWhats{
@@ -295,6 +367,7 @@ main > section#Servicos > .containerCards > .card > .botaoWhats > .logoBotaoWhat
 main > section#Servicos > .containerCards > .card > .botaoWhats > p{
     font-weight: 900;
     font-size: 1rem;
+    text-shadow: 2px 1px 1px #000000a0;
 }
 
 main > section#Contatos {
@@ -325,6 +398,8 @@ main > section#Contatos > h1{
     font-size: 2.5rem;
     text-align: center;
     line-height: 2.1rem;
+    color: var(--corDourada);
+    text-shadow: 2px 1px 1px #000000a0;
 }
 
 footer {
@@ -381,7 +456,7 @@ footer > .infosFooter{
     padding: 10px;
 }
 
-footer > .infosFooter > .menu-footer{
+footer > .infosFooter > #menu-footer{
     flex: 1 1 45%;
     display: flex;
     justify-content: center;
@@ -392,11 +467,11 @@ footer > .infosFooter > .menu-footer{
     height: 300px;
 }
 
-footer > .infosFooter > .menu-footer > h1{
+footer > .infosFooter > #menu-footer > h1{
     font-size: 1.5rem;
 }
 
-footer > .infosFooter > .menu-footer > ul {
+footer > .infosFooter > #menu-footer > ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -408,13 +483,13 @@ footer > .infosFooter > .menu-footer > ul {
     font-size: 1.2rem;
 }
 
-footer > .infosFooter > .menu-footer > ul > li {
+footer > .infosFooter > #menu-footer > ul > li {
     flex: 1 1 100%;
     padding: 10px;
     position: relative;
 }
 
-footer > .infosFooter > .menu-footer > ul > li > .itemMenuFooter {
+footer > .infosFooter > #menu-footer > ul > li > .itemMenuFooter {
     display: flex;
     width: 100%;
     height: 100%;
@@ -424,17 +499,17 @@ footer > .infosFooter > .menu-footer > ul > li > .itemMenuFooter {
     text-decoration: none;
 }
 
-footer > .infosFooter > .menu-footer > ul > li > .itemMenuFooter::after {
+footer > .infosFooter > #menu-footer > ul > li > .itemMenuFooter::after {
     content: "";
     position: absolute;
     width: 0px;
     bottom: -5px;
     height: 3px;
     background-color: var(--corDourada);
-    transition: width .3s;
+    transition: .3s ease;
 }
 
-footer > .infosFooter > .menu-footer > ul > li > .itemMenuFooter:hover::after {
+footer > .infosFooter > #menu-footer > ul > li > .itemMenuFooter:hover::after {
     width: 100%;
 }
 
