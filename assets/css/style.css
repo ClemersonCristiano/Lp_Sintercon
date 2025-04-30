@@ -532,9 +532,11 @@ footer > .desenvolvimento{
     max-width: 100%;
     height: 40px;
     color: #ffffff;
-    background-color: #000;
 }
 
+footer > .desenvolvimento > p{
+    border-bottom: 1px solid black;
+}
 footer > .desenvolvimento > p > a{
     text-decoration: none;
     color: #ffffff;
